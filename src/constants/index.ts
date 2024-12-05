@@ -1,0 +1,1 @@
+export const QUIZ_SUCCESS_FINISH_ANSWERS_COUNT = 6;
