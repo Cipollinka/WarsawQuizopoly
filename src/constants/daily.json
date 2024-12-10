@@ -1,0 +1,872 @@
+{
+  "1": {
+    "districtId": 1,
+    "name": "Old Town (Stare Miasto)",
+    "difficulty": "Easy",
+    "questions": [
+      {
+        "id": 1,
+        "question": "The Old Town in Warsaw is a UNESCO World Heritage site.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 2,
+        "question": "The Warsaw Mermaid is the symbol of Warsaw’s Old Town.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 3,
+        "question": "The Old Town survived WWII bombings without any damage.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Most buildings in the Old Town date back to the 18th century.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Market Square is the central square in the Old Town.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 6,
+        "question": "The Old Town is located on the eastern side of the Vistula River.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 7,
+        "question": "St. John’s Cathedral is one of the oldest churches in Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 8,
+        "question": "The Royal Castle in Old Town was built during the Renaissance.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 9,
+        "question": "Warsaw’s Old Town is known for its Gothic architecture.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 10,
+        "question": "The Barbican in Old Town was originally a royal palace.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      }
+    ]
+  },
+  "2": {
+    "districtId": 2,
+    "name": "Palace of Culture and Science (Center)",
+    "difficulty": "Easy",
+    "questions": [
+      {
+        "id": 1,
+        "question": "The Palace of Culture and Science was a gift from the Soviet Union.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 2,
+        "question": "It’s the tallest building in Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 3,
+        "question": "The building houses Warsaw’s main train station.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 4,
+        "question": "The Palace of Culture and Science has a public observation deck.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 5,
+        "question": "This building is located in Praga-North district.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 6,
+        "question": "It is a symbol of modernist architecture in Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 7,
+        "question": "The palace has more than 30 floors.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 8,
+        "question": "The Warsaw Film Festival is held in the Palace of Culture and Science.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 9,
+        "question": "The building was constructed in the 21st century.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 10,
+        "question": "The palace is often used as a concert venue.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      }
+    ]
+  },
+  "3": {
+    "districtId": 3,
+    "name": "Mokotów",
+    "difficulty": "Medium",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Mokotów is known for its extensive parks and green areas.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 2,
+        "question": "It is one of the oldest neighborhoods in Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Mokotów houses the main airport in Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Pole Mokotowskie is a popular park in this district.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Mokotów was heavily industrialized in the 19th century.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 6,
+        "question": "The district has many modern office buildings.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 7,
+        "question": "Mokotów is primarily a residential area.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 8,
+        "question": "Warsaw University main campus is in Mokotów.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 9,
+        "question": "Mokotów is located south of Warsaw’s city center.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 10,
+        "question": "It’s known for its high concentration of embassies.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      }
+    ]
+  },
+  "4": {
+    "districtId": 4,
+    "name": "Wilanów",
+    "difficulty": "Medium",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Wilanów is famous for the Wilanów Palace.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 2,
+        "question": "The Wilanów Palace was a residence for King Jan III Sobieski.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Wilanów is mostly an industrial district.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 4,
+        "question": "The architecture in Wilanów is predominantly Gothic.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Wilanów has several modern residential neighborhoods.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 6,
+        "question": "The Wilanów Palace Gardens are open to the public.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 7,
+        "question": "Wilanów is in the northern part of Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 8,
+        "question": "Wilanów hosts a yearly garden light show.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 9,
+        "question": "Wilanów Palace was destroyed in WWII and later rebuilt.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 10,
+        "question": "The district is known for its cultural and historical significance.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      }
+    ]
+  },
+  "5": {
+    "districtId": 5,
+    "name": "Żoliborz",
+    "difficulty": "Medium",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Żoliborz is one of Warsaw’s greenest districts.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 2,
+        "question": "This district is known for its Gothic churches.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Żoliborz has many Art Deco-style buildings.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 4,
+        "question": "The Warsaw Citadel is located in Żoliborz.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Żoliborz was developed as a 'garden city' in the 1920s.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 6,
+        "question": "It’s one of the oldest parts of Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 7,
+        "question": "Many artists and intellectuals live in Żoliborz.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 8,
+        "question": "The district’s name means 'Beautiful Shore' in French.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 9,
+        "question": "Żoliborz is a major business district.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 10,
+        "question": "It has fewer parks than other districts.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      }
+    ]
+  },
+  "6": {
+    "districtId": 6,
+    "name": "Praga-North",
+    "difficulty": "Medium",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Praga-North is on the eastern side of the Vistula River.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 2,
+        "question": "It’s home to Warsaw’s famous zoo.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 3,
+        "question": "The district is known for its high-rise office buildings.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Praga-North is famous for its street art and murals.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 5,
+        "question": "The area remained mostly intact after WWII.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 6,
+        "question": "Ząbkowska Street is a historic street in Praga-North.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 7,
+        "question": "The National Stadium is located in Praga-North.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 8,
+        "question": "The Koneser Center was once a vodka distillery.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 9,
+        "question": "Praga-North is known for its medieval architecture.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 10,
+        "question": "Praga-North is one of Warsaw’s most artistic districts.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      }
+    ]
+  },
+  "7": {
+    "districtId": 7,
+    "name": "Białołęka",
+    "difficulty": "Medium",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Białołęka is known for its historic buildings and monuments.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 2,
+        "question": "It’s one of the fastest-growing residential areas in Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 3,
+        "question": "The district is located on the western side of the Vistula River.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Białołęka has many new residential developments.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 5,
+        "question": "It’s mainly an industrial area.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 6,
+        "question": "Białołęka has numerous parks and nature reserves.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 7,
+        "question": "The Tarchomin neighborhood is part of Białołęka.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 8,
+        "question": "Białołęka was incorporated into Warsaw in the 2000s.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 9,
+        "question": "The district is known for its nightlife.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 10,
+        "question": "Białołęka offers affordable housing compared to central Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      }
+    ]
+  },
+  "8": {
+    "districtId": 8,
+    "name": "Bemowo",
+    "difficulty": "Medium",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Bemowo is known for its vibrant art scene.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 2,
+        "question": "The Warsaw Bemowo Airport is located here.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Bemowo is a primarily residential district.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Bemowo hosts Warsaw annual jazz festival.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 5,
+        "question": "There are many military facilities in Bemowo.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 6,
+        "question": "Bemowo has a large shopping center.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 7,
+        "question": "The district is known for its skyscrapers.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 8,
+        "question": "Bemowo has direct access to the Warsaw metro system.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 9,
+        "question": "The district is located south of Warsaw’s center.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 10,
+        "question": "Bemowo offers many sports facilities and parks.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      }
+    ]
+  },
+  "9": {
+    "districtId": 9,
+    "name": "Ursus",
+    "difficulty": "Medium",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ursus was known for its tractor production.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 2,
+        "question": "It is one of Warsaw’s main industrial districts today.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Ursus is named after a Latin word meaning 'bear.'",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 4,
+        "question": "The former Ursus factory site is now a residential area.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Ursus is located in central Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 6,
+        "question": "The district has many high-rise buildings.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 7,
+        "question": "Ursus has a history of political activism.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 8,
+        "question": "The Ursus district has few parks and green spaces.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 9,
+        "question": "The name Ursus has no historical significance.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 10,
+        "question": "Ursus was incorporated into Warsaw in the 1970s.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      }
+    ]
+  },
+  "10": {
+    "districtId": 10,
+    "name": "Downtown (Śródmieście)",
+    "difficulty": "Medium",
+    "questions": [
+      {
+        "id": 1,
+        "question": "The Royal Castle is located in Warsaw’s Downtown district.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 2,
+        "question": "Śródmieście is the financial center of Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 3,
+        "question": "The Old Town is part of Downtown.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Łazienki Park is found in Downtown.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Śródmieście has fewer historic buildings than other districts.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 6,
+        "question": "Downtown Warsaw is home to many modern skyscrapers.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 7,
+        "question": "The district is known for its large industrial areas.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 8,
+        "question": "Warsaw’s main shopping areas are in Śródmieście.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      },
+      {
+        "id": 9,
+        "question": "Śródmieście has the lowest population density in Warsaw.",
+        "options": [
+          {"answer": "True", "isCorrect": false},
+          {"answer": "False", "isCorrect": true}
+        ]
+      },
+      {
+        "id": 10,
+        "question": "The Palace of Culture and Science is located Downtown.",
+        "options": [
+          {"answer": "True", "isCorrect": true},
+          {"answer": "False", "isCorrect": false}
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Old Town",
+    "description": "The historical heart of Warsaw with castles, old streets and tourist attractions. Popular among tourists, which guarantees a stable income.",
+    "income": 100,
+    "difficulty": 1,
+    "position": {"top": 380, "left": 320, "zIndex": 2},
+    "image": "https://i.natgeofe.com/n/8c615f51-a29d-490f-aa2a-ff807697c6f9/eat_warsaw_GettyImages-1168222117_ukHR_square.jpg?w=256&h=256"
+  },
+  {
+    "id": 2,
+    "name": "Palace of Culture and Science (Center)",
+    "description": "Visiting card of Warsaw and one of the tallest buildings in Poland. The area attracts both tourists and local residents, which provides a high income.",
+    "income": 200,
+    "difficulty": 2,
+    "position": {"top": 450, "left": 260},
+    "image": "https://styles.redditmedia.com/t5_2ri7v/styles/communityIcon_svvk9isuw9o41.png"
+  },
+  {
+    "id": 3,
+    "name": "Vilyanov",
+    "description": "Luxurious area with the famous Wilanów Palace. Prestigious and attractive for investment.",
+    "income": 150,
+    "difficulty": 2,
+    "position": {"top": 750, "left": 600},
+    "image": "https://farm3.staticflickr.com/2899/14067255093_a3efbd7aff_z.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Prague-North",
+    "description": "Creative district with artistic spaces and unusual architecture. Known for its color and historical buildings.",
+    "income": 120,
+    "difficulty": 1,
+    "position": {"top": 270, "left": 350},
+    "image": "https://go2warsaw.pl/wp-content/uploads/plaza-praska-fot-lukasz-kopec-4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Zoliborz",
+    "description": "Quiet green area with cozy cafes and parks. An ideal place for investment.",
+    "income": 140,
+    "difficulty": 1,
+    "position": {"top": 290, "left": 240},
+    "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/332338366.jpg?k=ee40266db889a8ca4e7c9915b7397370f440edaf23891cb1354cc4c32293a86a&o=&hp=1"
+  },
+  {
+    "id": 6,
+    "name": "Mokotow",
+    "description": "A large and densely populated area with developed infrastructure, offices and residential complexes. Stable and high income.",
+    "income": 180,
+    "difficulty": 2,
+    "position": {"top": 690, "left": 400},
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBxlYSutdoBBCTLoif0hh4lpuHPoJl3728Ig&s"
+  },
+  {
+    "id": 7,
+    "name": "Ursus",
+    "description": "Quiet suburban area with opportunities for industrial development and affordable housing.",
+    "income": 110,
+    "difficulty": 1,
+    "position": {"top": 650, "left": 50},
+    "image": "https://www.urban-developers.com/assets/img/UDI-group-classicursus-000-2.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Bialoleka",
+    "description": "One of the fastest growing areas with lots of new construction and affordable housing. Excellent investment opportunity for beginners.",
+    "income": 130,
+    "difficulty": 1,
+    "position": {"top": 150, "left": 370},
+    "image": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/416972465.jpg?k=778a6fa5305c499dbc6616b3a72453f568b19c8239ef7f7161c36d5951669821&o="
+  },
+  {
+    "id": 9,
+    "name": "Bemowo",
+    "description": "Commercial and business center with numerous office complexes. A promising area for investments.",
+    "income": 160,
+    "difficulty": 2,
+    "position": {"top": 400, "left": 100},
+    "image": "https://thumbs.rynekpierwotny.pl/2fafa89d:u1KZvOx8j3xUQ6Iw4u12Fup6fwo/440x440/filters:upscale():format(jpg)/articles/gallery/image/12165/osiedle-awangarda-fort-bema-bemowo-warszawa_6ccb12.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Downtown",
+    "description": "The central district of the city with skyscrapers, prestigious offices and tourist locations. The most profitable and at the same time difficult to capture district.",
+    "income": 250,
+    "difficulty": 2,
+    "position": {"top": 500, "left": 370},
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Downtown_Warsaw.jpg/800px-Downtown_Warsaw.jpg"
+  }
+]
