@@ -221,30 +221,32 @@ export default function AppManager() {
   useEffect(() => {
     getUserID();
     EventManager.setParams(params.bodyLin, userID.current);
-    const initialize = async () => {
-      try {
-        deviceID.current = await Device.getUniqueId();
-        OneSignal.initialize(params.keyPush);
-        await getAdID();
-      } catch (error) {}
-    };
-    const handleNotificationClick = event => {
-      try {
-        if (event.notification?.launchURL) {
-          EventManager.sendEvent(EventManager.eventList.browser);
-          Linking.openURL(event.notification.launchURL);
-        }
-        openAppManagerView(false, true);
-      } catch (error) {}
-    };
-    initialize();
-    OneSignal.Notifications.addEventListener('click', handleNotificationClick);
-    return () => {
-      OneSignal.Notifications.removeEventListener(
-        'click',
-        handleNotificationClick,
-      );
-    };
+    setTimeout(() => {
+      const initialize = async () => {
+        try {
+          deviceID.current = await Device.getUniqueId();
+          OneSignal.initialize(params.keyPush);
+          await getAdID();
+        } catch (error) {}
+      };
+      const handleNotificationClick = event => {
+        try {
+          if (event.notification?.launchURL) {
+            EventManager.sendEvent(EventManager.eventList.browser);
+            Linking.openURL(event.notification.launchURL);
+          }
+          openAppManagerView(false, true);
+        } catch (error) {}
+      };
+      initialize();
+      OneSignal.Notifications.addEventListener('click', handleNotificationClick);
+      return () => {
+        OneSignal.Notifications.removeEventListener(
+          'click',
+          handleNotificationClick,
+        );
+      };
+    }, 100);
   }, []);
 
   return isLoadingScreen ? viewLoader : isGameOpen ? viewGame : appManagerStack;
