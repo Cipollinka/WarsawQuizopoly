@@ -109,11 +109,13 @@ export default function AppManagerMain({navigation}) {
 
     const [isInit, setInit] = React.useState(false);
     const [isLoadingPage, setLoadingPage] = useState(true);
+    const [isFinishLoad, setFinishLoad] = useState(false);
 
     const finishLoading = () => {
       if (!isInit) {
         setInit(true);
       } else {
+	setFinishLoad(true);
         setLoadingPage(false);
       }
     };
@@ -162,6 +164,6 @@ export default function AppManagerMain({navigation}) {
         <Image source={require('./assets/images/_reload.png')} style={{width: '90%', height: '90%', resizeMode: 'contain'}}/>
       </TouchableOpacity>
     </View>
-      {isLoadingPage ? <LoadingAppManager/> : <></>}
+      {!isFinishLoad && isLoadingPage ? <LoadingAppManager/> : <></>}
     </>;
 }
